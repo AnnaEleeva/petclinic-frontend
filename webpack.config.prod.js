@@ -15,11 +15,11 @@ module.exports = {
     path: path.join(__dirname, 'public/dist/'),
     filename: 'bundle.js',
     publicPath: '/',
-    devServer: {
-        historyApiFallback: true
-      }
     /* redbox-react/README.md */
     // ,devtoolModuleFilenameTemplate: '/[absolute-resource-path]'
+  },
+  devServer: {
+    historyApiFallback: true
   },
   plugins: [
     new webpack.DefinePlugin({
