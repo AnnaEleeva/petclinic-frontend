@@ -24,7 +24,10 @@ function setupCompiler(port, protocol) {
 
 function runDevServer(port, protocol) {
   const devServer = new WebpackDevServer(compiler, {
-    contentBase: path.join(__dirname, 'public'),
+    contentBase: [
+      path.join(__dirname, 'public'),
+      path.join(__dirname, 'public/dist')
+    ], // Serve files from public and public/dist
     hot: true,
     historyApiFallback: true, // This ensures that index.html is served for all routes
     publicPath: config.output.publicPath,
