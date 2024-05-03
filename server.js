@@ -30,7 +30,7 @@ function runDevServer(port, protocol) {
     ], // Serve files from both public and public/dist directories
     hot: true,
     historyApiFallback: {
-      index: '/dist/index.html', // Redirect all routes to /dist/index.html
+      index: '/index.html', // Redirect all routes to /dist/index.html
     },
     publicPath: '/dist/',
     quiet: true,
