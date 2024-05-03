@@ -18,10 +18,6 @@ module.exports = {
     /* redbox-react/README.md */
     // ,devtoolModuleFilenameTemplate: '/[absolute-resource-path]'
   },
-  devServer: {
-    contentBase: path.join(__dirname, 'public/dist'),
-    historyApiFallback: true,
-  },
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
