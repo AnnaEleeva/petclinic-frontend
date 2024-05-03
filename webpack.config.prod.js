@@ -14,12 +14,13 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'public/dist/'),
     filename: 'bundle.js',
-    publicPath: '/dist/',
+    publicPath: '/',
     /* redbox-react/README.md */
     // ,devtoolModuleFilenameTemplate: '/[absolute-resource-path]'
   },
   devServer: {
     contentBase: './public',
+    port: 8080,
     historyApiFallback: true,
   },
   plugins: [
