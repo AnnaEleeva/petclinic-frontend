@@ -19,7 +19,7 @@ module.exports = {
     // ,devtoolModuleFilenameTemplate: '/[absolute-resource-path]'
   },
   devServer: {
-    contentBase: path.join(__dirname, 'public/dist'),,
+    contentBase: path.join(__dirname, 'public/dist'),
     historyApiFallback: true,
   },
   plugins: [
