@@ -12,13 +12,14 @@ module.exports = {
   devtool: 'source-map',
   entry: entries,
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'public/dist'),
     filename: 'bundle.js',
     publicPath: '/',
     /* redbox-react/README.md */
     // ,devtoolModuleFilenameTemplate: '/[absolute-resource-path]'
   },
   devServer: {
+   contentBase: 'public/dist',
     historyApiFallback: true,
   },
   plugins: [
