@@ -5,6 +5,7 @@ const port = process.env.PORT || 3000;
 
 const entries = [
   './src/main.tsx'
+    'webpack-dev-server/client?https://purple-river-02c0d2803.5.azurestaticapps.net/:' + port,
 ];
 
 
