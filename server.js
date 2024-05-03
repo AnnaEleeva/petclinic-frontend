@@ -27,10 +27,12 @@ function runDevServer(port, protocol) {
     contentBase: [
       path.join(__dirname, 'public'),
       path.join(__dirname, 'public/dist')
-    ], // Serve files from public and public/dist
+    ], // Serve files from both public and public/dist directories
     hot: true,
-    historyApiFallback: true, // This ensures that index.html is served for all routes
-    publicPath: config.output.publicPath,
+    historyApiFallback: {
+      index: '/dist/index.html', // Redirect all routes to /dist/index.html
+    },
+    publicPath: '/dist/',
     quiet: true,
     watchOptions: {
       ignored: /node_modules/
