@@ -7,7 +7,7 @@
     "removeComments": true,
     "target": "ES6",
     "allowJs": true,
-    "outDir": "public",
+    "outDir": "public/dist",
     "sourceMap": true
   },
   "exclude": [
