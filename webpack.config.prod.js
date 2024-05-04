@@ -9,7 +9,7 @@ const entries = [
 
 
 module.exports = {
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
   entry: entries,
   output: {
     path: path.join(__dirname, 'public/dist'),
