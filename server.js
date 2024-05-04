@@ -26,14 +26,13 @@ function runDevServer(port, protocol) {
   const devServer = new WebpackDevServer(compiler, {
     contentBase: [
       path.join(__dirname, 'public'),
-      path.join(__dirname, '/'),
-      path.join(__dirname, '.')
+      path.join(__dirname, 'public/dist')
     ], // Serve files from both public and public/dist directories
     hot: true,
     historyApiFallback: {
       index: '/index.html', // Redirect all routes to /dist/index.html
     },
-    publicPath: '/public',
+    publicPath: '/dist/',
     quiet: true,
     watchOptions: {
       ignored: /node_modules/
