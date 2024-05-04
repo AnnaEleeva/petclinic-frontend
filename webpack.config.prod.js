@@ -16,24 +16,6 @@ module.exports = {
     /* redbox-react/README.md */
     // ,devtoolModuleFilenameTemplate: '/[absolute-resource-path]'
   },
-        devServer: {
-          contentBase: path.join(__dirname, 'public'),
-          inline: true,
-          compress: true,
-          historyApiFallback: true,
-          proxy: {
-            '/graphql': {
-              secure: false,
-              target: 'http://gepick.com:4002/graphql',
-              changeOrigin: true,
-            },
-            '/predict': {
-              secure: false,
-              target: 'http://localhost:5000',
-              changeOrigin: true,
-            },
-          },
-        },
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
