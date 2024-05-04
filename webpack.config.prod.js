@@ -3,12 +3,14 @@ const webpack = require('webpack');
 
 const port = process.env.PORT || 3000;
 
+const entries = [
+  './src/main.tsx'
+];
 
 
 module.exports = {
   devtool: 'source-map',
-  context: path.join(__dirname, 'src'),
-  entry: ['./main.tsx'],
+  entry: entries,
   output: {
     path: path.join(__dirname, 'public/'),
     filename: 'bundle.js',
